@@ -6,16 +6,15 @@ const DetailedProvinceInfo = ({ province }) => {
   const [recoveredCases, setRecoveredCases] = useState(null);
 
   useEffect(() => {
-    const yesterdayDate = new Date().getTime() - 1000 * 60 * 60 * 24;
-    const formattedDate = new Date(yesterdayDate).toISOString().split('T')[0];
-    console.log(formattedDate)
+    const yesterdayDate = new Date(new Date().toLocaleString("en-US", { timeZone: "America/Toronto" })).getTime() - 1000 * 60 * 60 * 24;
+    const formattedDate = new Date(yesterdayDate).toLocaleDateString('pt-br').split( '/' ).reverse( ).join( '-' )
     fetch(`https://api.opencovid.ca/timeseries?loc=${province.code}&after=${formattedDate}`)
       .then(res => {
         return res.json()
       })
       .then(data => {
         if (data.active[0].active_cases === 0) {
-          setActiveCases(0)
+          setActiveCases(null)
         } else {
           setActiveCases(data.active[0].active_cases)
         }
