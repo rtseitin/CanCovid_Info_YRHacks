@@ -57,7 +57,7 @@ const DetailedProvinceInfo = ({ province }) => {
       
       <h1 style={{marginTop: "1em", color: "black"}}>Resources:</h1>
       {province.resources.map((resource) => (
-       <a href={resource.url}><h2>{resource.description}</h2></a>
+       <h2><a href={resource.url}>{resource.description}</a></h2>
       ))}
     </div>
   );
