@@ -31,7 +31,7 @@ const DetailedProvinceInfo = ({ province }) => {
           setRecoveredCases(data.recovered[0].cumulative_recovered)
         }
       });
-  }, []);
+  }, [province.code]);
 
   return (
     <div className="detailed_province_info">

@@ -4,6 +4,12 @@
   margin: 0;
   font-family: "lato";
   color: #333;
+
+  --primary-gradient-color: #FFB682;
+  --secondary-gradient-color: #FF8D86;
+
+  --primary-gradient-color-dark: #c48a60;
+  --secondary-gradient-color-dark: #b15f5b;
 }
 .navbar {
   padding: 20px;
@@ -65,14 +71,14 @@
 
 .home h1 {
   font-size: 56px;
-  background-image: linear-gradient(45deg, #FFB682, #FF8D86);
+  background-image: linear-gradient(45deg, var(--primary-gradient-color), var(--secondary-gradient-color));
   background-clip: text;
   -webkit-text-fill-color: transparent; 
   -moz-text-fill-color: transparent;
 }
 
 .home button {
-  background-image: linear-gradient(45deg, #FFB682, #FF8D86);
+  background-image: linear-gradient(45deg, var(--primary-gradient-color), var(--secondary-gradient-color));
   border: 0px;
   border-radius: 4px;
   padding: 10px;
@@ -84,7 +90,7 @@
 }
 
 .home button:hover {
-  background-image: linear-gradient(45deg, #c48a60, #b15f5b);
+  background-image: linear-gradient(45deg, var(--primary-gradient-color-dark), var(--secondary-gradient-color-dark));
   border: 0px;
   border-radius: 4px;
   padding: 10px;
@@ -141,23 +147,23 @@ html {
 
 .province_info h1{
   text-align: center;
-  background-image: linear-gradient(45deg, #FFB682, #FF8D86);
+  background-image: linear-gradient(45deg, var(--primary-gradient-color), var(--secondary-gradient-color));
   color: white;
 }
 
 .detailed_province_info .province_name h1{
   text-align: center;
-  background-image: linear-gradient(45deg, #FFB682, #FF8D86);
+  background-image: linear-gradient(45deg, var(--primary-gradient-color), var(--secondary-gradient-color));
   color: white;
 }
 
 .province_info h1:hover {
-  background-image: linear-gradient(45deg, #c48a60, #b15f5b);
+  background-image: linear-gradient(45deg, var(--primary-gradient-color-dark), var(--secondary-gradient-color-dark));
 }
 
 .province_name {
   text-align: center;
-  background-image: linear-gradient(45deg, #FFB682, #FF8D86);
+  background-image: linear-gradient(45deg, var(--primary-gradient-color), var(--secondary-gradient-color));
   color: white;
 }
 
